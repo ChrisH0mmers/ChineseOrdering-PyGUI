@@ -67,7 +67,15 @@ class Application(Frame):
         menu_lbl = Label(self, text="Choose amount with numbers", font=bold_font)
         menu_lbl.grid(row=0, column=0, sticky=W)
 
+        self.cr1_lbl = Label(self, text = "Chinese-Rijsttafel 1 persoon ")
+        self.cr1_lbl.grid(row =1, column = 0, sticky = W)
         
+        self.cr1_ent1 = Entry(self)
+        self.cr1_ent1.grid(row =1, column = 1, sticky = W)
+
+
+
+
 
 
 
@@ -79,6 +87,9 @@ root.geometry("1400x800")
 app = Application(master=root)
 app.pack()
 # endregion Root
+
+
+
 
 root.mainloop()
 
