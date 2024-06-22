@@ -20,14 +20,14 @@ class Application(Frame):
         self.pw_lbl = Label(self, text = "Username")
         self.pw_lbl.grid(row =1, column = 0, sticky = W)
 
-        self.pw_ent = Entry(self)
-        self.pw_ent.grid(row =1, column = 1, sticky = W)
+        self.pw_ent1 = Entry(self)
+        self.pw_ent1.grid(row =1, column = 1, sticky = W)
 
         self.pw_lbl = Label(self, text = "Password")
         self.pw_lbl.grid(row =2, column = 0, sticky = W)
 
-        self.pw_ent = Entry(self)
-        self.pw_ent.grid(row =2, column = 1, sticky = W)
+        self.pw_ent2 = Entry(self)
+        self.pw_ent2.grid(row =2, column = 1, sticky = W)
 
 
         self.submit_bttn1 = Button(self, text="Submit", command = self.reveal)
