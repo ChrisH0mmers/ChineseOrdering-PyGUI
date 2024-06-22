@@ -63,15 +63,26 @@ class Application(Frame):
         self.secret_txt.grid_remove()
         self.submit_bttn1.grid_remove()
 
-        bold_font = font.Font(weight="bold")
         menu_lbl = Label(self, text="Choose amount with numbers", font=bold_font)
         menu_lbl.grid(row=0, column=0, sticky=W)
 
-        self.cr1_lbl = Label(self, text = "Chinese-Rijsttafel 1 persoon ")
-        self.cr1_lbl.grid(row =1, column = 0, sticky = W)
-        
+        self.cr1_lbl = Label(self, text="Chinese-Rijsttafel 1 persoon")
+        self.cr1_lbl.grid(row=1, column=0, sticky=W)
+
         self.cr1_ent1 = Entry(self)
-        self.cr1_ent1.grid(row =1, column = 1, sticky = W)
+        self.cr1_ent1.grid(row=1, column=1, sticky=W)
+
+        self.cr2_lbl = Label(self, text="Chinese-Rijsttafel 2 personen")
+        self.cr2_lbl.grid(row=2, column=0, sticky=W)
+
+        self.cr2_ent1 = Entry(self)
+        self.cr2_ent1.grid(row=2, column=1, sticky=W)
+
+        self.submit_menu_bttn = Button(self, text="Submit", command=self.process_menu)
+        self.submit_menu_bttn.grid(row=3, column=0, columnspan=2, pady=10)
+
+        self.menu_result_txt = Text(self, width=35, height=5, wrap=WORD)
+        self.menu_result_txt.grid(row=4, column=0, columnspan=2, sticky=W) 
 
 
 
