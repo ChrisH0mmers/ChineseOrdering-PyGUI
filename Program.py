@@ -33,7 +33,11 @@ class Application(Frame):
         self.submit_bttn1 = Button(self, text="Submit", command = self.reveal)
         self.submit_bttn1.grid(row=3, column=0, columnspan=2, pady=10)
     def reveal(self):
-        contents= self.pw_ent.get()
+        User1 = self.pw_ent1.get()
+        Password1 = self.pw_ent2.get()
+
+
+
 
 # region Root
 root = Tk()
@@ -43,6 +47,7 @@ root.geometry("1400x800")
 app = Application(master=root)
 app.pack()
 # endregion Root
+
 
 
 
