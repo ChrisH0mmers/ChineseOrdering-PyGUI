@@ -1,6 +1,6 @@
 from tkinter import *
 import tkinter.font as font
-
+from tkinter.ttk import *
 
 
 
@@ -32,9 +32,23 @@ class Application(Frame):
 
         self.submit_bttn1 = Button(self, text="Submit", command = self.reveal)
         self.submit_bttn1.grid(row=3, column=0, columnspan=2, pady=10)
+
+        self.secret_txt = Text(self, width = 35, height = 5, wrap = WORD)
+        self.secret_txt.grid(row=6, column=0, columnspan =2, sticky =W)
+
     def reveal(self):
         User1 = self.pw_ent1.get()
         Password1 = self.pw_ent2.get()
+        if User1 == "Hoa-Wah" and Password1 == "m@ng0":
+            message = "Login complete"
+        else:
+            message= "Login failed"  
+
+        self.secret_txt.delete(0.0, END)
+        self.secret_txt.insert(0.0, message)
+        
+
+
 
 
 
