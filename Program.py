@@ -26,8 +26,8 @@ class Application(Frame):
         self.pw_lbl = Label(self, text = "Password")
         self.pw_lbl.grid(row =2, column = 0, sticky = W)
 
-        self.pw_ent2 = Entry(self)
-        self.pw_ent2.grid(row =2, column = 1, sticky = W)
+        self.pw_ent = Entry(self, show ='*')
+        self.pw_ent.grid(row =2, column = 1, sticky = W)
 
 
         self.submit_bttn1 = Button(self, text="Submit", command = self.reveal)
@@ -38,11 +38,12 @@ class Application(Frame):
 
     def reveal(self):
         User1 = self.pw_ent1.get()
-        Password1 = self.pw_ent2.get()
+        Password1 = self.pw_ent.get()
         if User1 == "Hoa-Wah" and Password1 == "m@ng0":
             message = "Login complete"
         else:
-            message= "Login failed"  
+            message= "Login failed"
+            self.pw_ent.delete(0, END)  
 
         self.secret_txt.delete(0.0, END)
         self.secret_txt.insert(0.0, message)
