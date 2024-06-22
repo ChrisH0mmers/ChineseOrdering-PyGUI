@@ -62,7 +62,7 @@ class Application(Frame):
         self.cr1_lbl.grid(row=1, column=0, sticky=W)
 
         self.cr1_ent1 = Entry(self)
-        self.cr1_ent1.grid(row=1, column=1, sticky=W) 
+        self.cr1_ent1.grid(row=1, column=1, sticky=W)        
 
         self.cr2_lbl = Label(self, text="Chinese-Rijsttafel 2 personen")
         self.cr2_lbl.grid(row=2, column=0, sticky=W)
